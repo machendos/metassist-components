@@ -14,13 +14,23 @@ class Checkbox extends Component {
 
   render() {
     console.log.call(this, this.state.open);
+    const body = this.state.open ? <div>{this.data.map(el => <p>{el}</p>)}</div> : <div></div>
     return (
       <div>
         <input type="checkbox" id="first" onClick = {this.clickReaction} />
         <label htmlFor="first">{this.caption}</label><br />
+        {body}
         
       </div>
     )
+  }
+
+  clickReaction = () => {
+    console.log.call(this, 'TRANS:', this.open);
+    this.setState({
+      open: !this.state.open,
+      checked: !this.checked
+    })
   }
 
 }
