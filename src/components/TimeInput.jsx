@@ -13,9 +13,9 @@ class TimeInput extends Component {
     return (
       <div>
         с
-        <Time day={this.day} newId={this.id}/>
+        <Time day={this.day} newId={ this.id }/>
         до
-        <Time day={this.day} newId={this.id + 2}/>
+        <Time day={this.day} newId={ this.id + 2 }/>
       </div>
     )
   }
